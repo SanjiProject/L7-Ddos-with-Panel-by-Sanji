@@ -63,7 +63,7 @@ def main():
                 '4': 'bypass.js'
             }
             method = methods[choice]
-            command = f"node {method} {url} 5000 512 4 proxy.txt"
+            command = f"node {method} {url} 5000 256 5 proxy.txt"
             if method != 'scrape.js':  # Don't run scrape.js in background
                 run_command(command, background=True)
             else:
