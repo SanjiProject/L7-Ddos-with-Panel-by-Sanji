@@ -49,17 +49,17 @@ if __name__ == "__main__":
             with open(file, 'a') as data:
                 for proxy in list:
                     data.write(httpx.get(proxy).text)
-                    print(" -| mengambil {}{}".format(fg, proxy))
+                    print(" -| Fetching {}{}".format(fg, proxy))
         else:
             os.system('cls' if os.name == 'nt' else 'clear')
             with open(file, 'a') as data:
                 for proxy in list:
                     data.write(httpx.get(proxy).text)
-                    print(" -| mengambil {}{}".format(fg, proxy))
+                    print(" -| Fetching {}{}".format(fg, proxy))
     
         with open(file, 'r') as count:
             total = sum(1 for line in count)
-        print("\n{}( {}{} {}) {}Proxy Berhasil Di Unduh.". format(fw, fy, total, fw, fg))
+        print("\n{}( {}{} {}) {}Proxy Updated!.". format(fw, fy, total, fw, fg))
     
     except IndexError:
         sys.exit(1)
