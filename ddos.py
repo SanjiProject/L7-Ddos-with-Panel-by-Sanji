@@ -53,7 +53,7 @@ def main():
         if choice == '0':
             run_command("node scrape.js")
         elif choice == 's':
-            run_command("node scrape.py")
+            run_command("python3 scrape.py")
         elif choice in ['1', '2', '3', '4']:
             url = get_url()
             methods = {
